@@ -4,7 +4,8 @@ import Footer from './footer';
 import Uptime from './uptime';
 
 const App = () => {
-  const { ApiKeys } = window.Config;
+  const { ApiKeys, SiteName } = window.Config;
+  window.document.title = SiteName;
   return (
     <>
       <Header />
