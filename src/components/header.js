@@ -2,13 +2,15 @@ import React from 'react';
 import Link from './link';
 
 const Header = () => {
+  const { SiteName, SiteUrl, Navi } = window.Config;
   return (
     <div id="header">
       <div className="container">
-        <a className="logo" href="./">Uptime Status</a>
+        <a className="logo" href={SiteUrl}>{SiteName}</a>
         <div className="navi">
-          <Link text="Homepage" to="https://status.org.cn/" />
-          <Link text="GitHub" to="https://github.com/yb/uptime-status" />
+        {Navi.map((item, index) => (
+          <Link key={index} text={item.text} to={item.url} />
+        ))}
         </div>
       </div>
     </div>

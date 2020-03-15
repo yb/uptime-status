@@ -5,6 +5,40 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <title>Uptime Status</title>
   <link rel="shortcut icon" href="%PUBLIC_URL%/favicon.ico" type="image/x-icon" />
+  <script>
+
+  // 配置
+  window.Config = {
+
+    // 站点名
+    SiteName: 'Uptime Status',
+
+    // 站点链接
+    SiteUrl: '/',
+
+    // UptimeRobot Api Keys
+    // 支持 Monitor-Specific 和 Read-Only 两只 Api Key
+    ApiKeys: [
+      'm784488775-dd1ad84b209c05f8e185c33e',
+      'm784490063-7b5da437e7f1e0d67613714d',
+      'm784497419-de55aa09902ccb3ab22d548a',
+      'm784496436-71a4bf7b1e3bdf7756be131b',
+    ],
+
+    // 导航栏菜单
+    Navi: [
+      {
+        text: 'Homepage',
+        url: 'https://status.org.cn/'
+      },
+      {
+        text: 'GitHub',
+        url: 'https://github.com/yb/uptime-status'
+      }
+    ]
+  };
+  
+  </script>
 </head>
 <body>
   <div id="app"></div>

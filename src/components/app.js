@@ -2,9 +2,9 @@ import React from 'react';
 import Header from './header';
 import Footer from './footer';
 import Uptime from './uptime';
-import { ApiKeys } from './../config';
 
 const App = () => {
+  const { ApiKeys } = window.Config;
   return (
     <>
       <Header />
