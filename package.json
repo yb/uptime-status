@@ -1,6 +1,6 @@
 {
   "name": "uptime-status",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "dependencies": {
     "axios": "^0.19.2",
@@ -31,5 +31,6 @@
   },
   "devDependencies": {
     "react-app-rewired": "^2.1.5"
-  }
+  },
+  "homepage": "./"
 }
