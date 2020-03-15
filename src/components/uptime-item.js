@@ -6,6 +6,7 @@ import { formatDuration } from '../utils/helper';
 
 const UptimeItem = (props) => {
 
+  const { ShowLink, CountDays } = window.Config;
   const { monitor } = props;
   const initial = monitor.daily[monitor.daily.length - 1].date;
   const status = {
@@ -15,15 +16,15 @@ const UptimeItem = (props) => {
   };
 
   const total = monitor.total.times
-    ? `最近 60 天故障 ${monitor.total.times} 次，累计 ${formatDuration(monitor.total.duration)}，平均可用率 ${monitor.average}%`
-    : `最近 60 天可用率 ${monitor.average}%`;
+    ? `最近 ${CountDays} 天故障 ${monitor.total.times} 次，累计 ${formatDuration(monitor.total.duration)}，平均可用率 ${monitor.average}%`
+    : `最近 ${CountDays} 天可用率 ${monitor.average}%`;
 
   return (
     <div className="item">
       <div className="meta">
         <div className="info">
           <span className="name">{monitor.name}</span>
-          <Link className="link" to={monitor.url} text={monitor.name} />
+          {ShowLink && <Link className="link" to={monitor.url} text={monitor.name} />}
         </div>
         <div className={`status ${monitor.status}`}>{status[monitor.status]}</div>
       </div>
