@@ -72,9 +72,19 @@ export const GetMonitors = async (apikey, days) => {
     if (monitor.status === 2) status = 'ok';
     if (monitor.status === 9) status = 'down';
 
+    let name = monitor.friendly_name.replace(/&#39;/gi, "'");
+    name = name.replace(/&#40;/gi, "(");
+    name = name.replace(/&#41;/gi, ")");
+    name = name.replace(/&#061;/gi, "=");
+    name = name.replace(/&#091;/gi, "[");
+    name = name.replace(/&#093;/gi, "]");
+    name = name.replace(/&quot;/gi, '"');
+    name = name.replace(/&lt;/gi, "<");
+    name = name.replace(/&gt;/gi, ">");
+
     apps.push({
       id: monitor.id,
-      name: monitor.friendly_name,
+      name: name,
       url: monitor.url,
       status: status,
       average: average,
