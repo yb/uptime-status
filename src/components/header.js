@@ -8,9 +8,9 @@ const Header = () => {
       <div className="container">
         <a className="logo" href={SiteUrl}>{SiteName}</a>
         <div className="navi">
-        {Navi.map((item, index) => (
-          <Link key={index} text={item.text} to={item.url} />
-        ))}
+          {Navi.map((item, index) => (
+            <Link key={index} text={item.text} to={item.url} />
+          ))}
         </div>
       </div>
     </div>
