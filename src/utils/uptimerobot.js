@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import Axios from 'axios';
 import { fixed } from './helper';
 
-const Api = 'https://uptimerobot.renfei.workers.dev/v2/getMonitors';
+const Api = 'https://uptimerobot-api.renfei.net/v2/getMonitors';
 
 export const GetMonitors = async (apikey, days) => {
 
