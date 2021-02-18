@@ -29,7 +29,7 @@ export const GetMonitors = async (apikey, days) => {
     custom_uptime_ranges: ranges.join('-'),
   };
 
-  const api = window.Config.ApiDomain;
+  const api = window.Config.ApiDomain || 'api.uptimerobot.com';
   const monitors = await Axios.post(`https://${api}/v2/getMonitors`, postdata, { timeout: 10000 })
     .then(response => {
       if (response.data.stat === 'ok') return Promise.resolve(response.data.monitors);
