@@ -2,8 +2,6 @@ import dayjs from 'dayjs';
 import Axios from 'axios';
 import { fixed } from './helper';
 
-const Api = 'https://api.uptimerobot.com/v2/getMonitors';
-
 export const GetMonitors = async (apikey, days) => {
 
   const dates = [];
@@ -31,7 +29,8 @@ export const GetMonitors = async (apikey, days) => {
     custom_uptime_ranges: ranges.join('-'),
   };
 
-  const monitors = await Axios.post(Api, postdata, { timeout: 10000 })
+  const api = window.Config.ApiDomain;
+  const monitors = await Axios.post(`https://${api}/v2/getMonitors`, postdata, { timeout: 10000 })
     .then(response => {
       if (response.data.stat === 'ok') return Promise.resolve(response.data.monitors);
       else return Promise.reject(response.data.error);
@@ -52,7 +51,7 @@ export const GetMonitors = async (apikey, days) => {
         down: { times: 0, duration: 0 }
       }
     });
-    
+
     let total = {
       times: 0,
       duration: 0,

@@ -3,13 +3,13 @@
   "version": "1.4.0",
   "private": true,
   "dependencies": {
-    "axios": "^0.19.2",
-    "dayjs": "^1.8.31",
-    "htmr": "^0.8.8",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-scripts": "^3.4.1",
-    "react-tooltip": "^4.2.7"
+    "axios": "^0.21.1",
+    "dayjs": "^1.10.4",
+    "htmr": "^0.9.2",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-scripts": "^4.0.2",
+    "react-tooltip": "^4.2.14"
   },
   "scripts": {
     "start": "react-app-rewired start",
@@ -31,7 +31,7 @@
     ]
   },
   "devDependencies": {
-    "react-app-rewired": "^2.1.6"
+    "react-app-rewired": "^2.1.8"
   },
   "homepage": "./"
 }

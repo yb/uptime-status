@@ -4,7 +4,7 @@ import Footer from './footer';
 import Uptime from './uptime';
 
 const App = () => {
-  
+
   const { ApiKeys, SiteName } = window.Config;
 
   useEffect(() => {

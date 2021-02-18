@@ -9,7 +9,7 @@ const UptimeItem = (props) => {
 
   const { ShowLink, CountDays } = window.Config;
   const { monitor } = props;
-  
+
   const status = {
     ok: '正常',
     down: '无法访问',
