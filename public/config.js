@@ -9,7 +9,7 @@ window.Config = {
 
   // UptimeRobot Api 域名
   // 只需填写域名部分，默认为官网域名
-  // 因官网 API 时不时的会 CROS 报错，可填自定义反代域名
+  // 因官网 API 时不时的会 CORS 报错，可填自定义反代域名
   // 详见 https://github.com/yb/uptime-status/ 说明
   ApiDomain: 'api.uptimerobot.com',
 
