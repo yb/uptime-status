@@ -28,6 +28,6 @@ addEventListener('fetch', (event) => {
 });
 ```
 
-修改 `config.js` 中的 `ApiDomian` 为你的域名；
+修改 `config.js` 中的 `ApiDomain` 为你的域名；
 
 Modify `ApiDomian` in `config.js` to your domain;
