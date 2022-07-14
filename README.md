@@ -2,6 +2,8 @@
 
 一个基于 UptimeRobot API 的在线状态面板
 
+<img width="1152" alt="image" src="https://user-images.githubusercontent.com/25887822/178935137-6d23521d-5894-4fb8-922d-3575be4f7abc.png">
+
 ## 事先准备
 
 - 您需要先到 [UptimeRobot](https://uptimerobot.com/ "UptimeRobot") 添加站点监控，并在 My Settings 页面获取 API Key
