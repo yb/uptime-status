@@ -33,4 +33,7 @@ window.Config = {
       url: 'https://abo.xyz/'
     },
   ],
+
+  // 页脚ICP备案信息(留空不显示)
+  IcpLicense: '',
 };

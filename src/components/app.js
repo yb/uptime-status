@@ -13,6 +13,8 @@ function App() {
     return [];
   }, []);
 
+  const { IcpLicense } = window.Config;
+
   return (
     <>
       <Header />
@@ -23,6 +25,7 @@ function App() {
           ))}
         </div>
         <div id='footer'>
+          <p><Link to='https://beian.miit.gov.cn/' text={IcpLicense} /></p>
           <p>基于 <Link to='https://uptimerobot.com/' text='UptimeRobot' /> 接口制作，检测频率 5 分钟</p>
           <p>&copy; 2020 <Link to='https://status.org.cn/' text='STATUS.ORG.CN' />, Version {Package.version}</p>
         </div>
