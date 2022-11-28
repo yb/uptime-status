@@ -127,6 +127,9 @@ a {
         &.ok {
           background-color: $primary-color;
         }
+        &.good {
+          background-color: #ffa500;
+        }
         &.down {
           background-color: #de484a;
         }

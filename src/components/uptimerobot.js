@@ -8,6 +8,7 @@ function UptimeRobot({ apikey }) {
 
   const status = {
     ok: '正常',
+    good: '一般',
     down: '无法访问',
     unknow: '未知'
   };
@@ -34,6 +35,10 @@ function UptimeRobot({ apikey }) {
           if (data.uptime >= 100) {
             status = 'ok';
             text += `可用率 ${formatNumber(data.uptime)}%`;
+          }
+          else if (data.uptime >= 98) {
+            status = 'good';
+            text += `故障 ${data.down.times} 次，累计 ${formatDuration(data.down.duration)}，可用率 ${formatNumber(data.uptime)}%`;
           }
           else if (data.uptime <= 0 && data.down.times === 0) {
             status = 'none';
