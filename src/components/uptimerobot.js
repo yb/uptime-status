@@ -7,9 +7,9 @@ import Link from './link';
 function UptimeRobot({ apikey }) {
 
   const status = {
-    ok: '正常',
-    down: '无法访问',
-    unknow: '未知'
+    ok: 'Ok',
+    down: 'Down',
+    unknow: 'Unknown'
   };
 
   const { CountDays, ShowLink } = window.Config;
@@ -33,25 +33,25 @@ function UptimeRobot({ apikey }) {
           let text = data.date.format('YYYY-MM-DD ');
           if (data.uptime >= 100) {
             status = 'ok';
-            text += `可用率 ${formatNumber(data.uptime)}%`;
+            text += `Uptime ${formatNumber(data.uptime)}%`;
           }
           else if (data.uptime <= 0 && data.down.times === 0) {
             status = 'none';
-            text += '无数据';
+            text += 'None';
           }
           else {
             status = 'down';
-            text += `故障 ${data.down.times} 次，累计 ${formatDuration(data.down.duration)}，可用率 ${formatNumber(data.uptime)}%`;
+            text += `Times Down ${data.down.times} Duration ${formatDuration(data.down.duration)}，Uptime ${formatNumber(data.uptime)}%`;
           }
           return (<i key={index} className={status} data-tip={text} />)
         })}
       </div>
       <div className='summary'>
-        <span>今天</span>
+        <span>Today</span>
         <span>
           {site.total.times
-            ? `最近 ${CountDays} 天故障 ${site.total.times} 次，累计 ${formatDuration(site.total.duration)}，平均可用率 ${site.average}%`
-            : `最近 ${CountDays} 天可用率 ${site.average}%`}
+            ? `Count Days ${CountDays} Total Times ${site.total.times} Duration ${formatDuration(site.total.duration)}，Average ${site.average}%`
+            : `Count Days ${CountDays} Average ${site.average}%`}
         </span>
         <span>{site.daily[site.daily.length - 1].date.format('YYYY-MM-DD')}</span>
       </div>
