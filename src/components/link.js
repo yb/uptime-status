@@ -1,6 +1,6 @@
 function Link(props = { text, to }) {
   return (
-    <a {...props} href={props.to} target='_self'>
+    <a {...props} href={props.to}>
       {props.text}
     </a>
   );
