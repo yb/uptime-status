@@ -1,6 +1,6 @@
 window.Config = {
   // Menu-bar Name
-  SiteName: 'Public Status',
+  SiteName: 'HLP Status',
 
   // UptimeRobot Api Keys
   // Monitor-Specific  Read-Only
