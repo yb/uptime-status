@@ -50,8 +50,8 @@ function UptimeRobot({ apikey }) {
         <span>Today</span>
         <span>
           {site.total.times
-            ? `Count Days ${CountDays} Total Times ${site.total.times} Duration ${formatDuration(site.total.duration)}，Average ${site.average}%`
-            : `Count Days ${CountDays} Average ${site.average}%`}
+            ? `Days ${CountDays}    Times ${site.total.times} Duration ${formatDuration(site.total.duration)}，Uptime ${site.average}%`
+            : `Days ${CountDays}    Uptime ${site.average}%`}
         </span>
         <span>{site.daily[site.daily.length - 1].date.format('YYYY-MM-DD')}</span>
       </div>
