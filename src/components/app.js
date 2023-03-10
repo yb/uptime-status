@@ -23,7 +23,7 @@ function App() {
           ))}
         </div>
         <div id='footer'>
-          <p>2023 <Link to='https://hostlike.pro/' text='HostLikePro' /> - Your hosting provider</p>
+          <p>2023 - <Link to='https://hostlike.pro/' text='HostLikePro' /> - Your hosting provider</p>
         </div>
       </div>
     </>
