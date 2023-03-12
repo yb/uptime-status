@@ -15,7 +15,8 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 16
-      - run: npm run build
+      - run: npm install
+      - run: npm start
 
   publish-gpr:
     needs: build
