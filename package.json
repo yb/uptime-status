@@ -2,7 +2,6 @@
   "name": "status-bot",
   "version": "1.0.1",
   "license": "MIT",
-  "private": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
