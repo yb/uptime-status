@@ -1,4 +1,4 @@
-import ReactTooltip from 'react-tooltip';
+﻿import ReactTooltip from 'react-tooltip';
 import { useEffect, useState } from 'react';
 import { GetMonitors } from '../common/uptimerobot';
 import { formatDuration, formatNumber } from '../common/helper';
@@ -7,8 +7,8 @@ import Link from './link';
 function UptimeRobot({ apikey }) {
 
   const status = {
-    ok: 'Ok',
-    down: 'Down',
+    ok: 'Online',
+    down: 'Offline',
     unknow: 'Unknown'
   };
 
@@ -33,7 +33,7 @@ function UptimeRobot({ apikey }) {
           let text = data.date.format('YYYY-MM-DD ');
           if (data.uptime >= 100) {
             status = 'ok';
-            text += `Uptime ${formatNumber(data.uptime)}%`;
+            text += `| Uptime: ${formatNumber(data.uptime)}%`;
           }
           else if (data.uptime <= 0 && data.down.times === 0) {
             status = 'none';
@@ -41,7 +41,7 @@ function UptimeRobot({ apikey }) {
           }
           else {
             status = 'down';
-            text += `Times Down ${data.down.times} Duration ${formatDuration(data.down.duration)}，Uptime ${formatNumber(data.uptime)}%`;
+            text += `| Times Down: ${data.down.times}，Duration: ${formatDuration(data.down.duration)}，Uptime: ${formatNumber(data.uptime)}%`;
           }
           return (<i key={index} className={status} data-tip={text} />)
         })}
@@ -50,8 +50,8 @@ function UptimeRobot({ apikey }) {
         <span>Today</span>
         <span>
           {site.total.times
-            ? `Days ${CountDays}    Times ${site.total.times} Duration ${formatDuration(site.total.duration)}，Uptime ${site.average}%`
-            : `Days ${CountDays}    Uptime ${site.average}%`}
+            ? `Times down: ${site.total.times}，Duration: ${formatDuration(site.total.duration)}，Uptime: ${site.average}%`
+            : `Uptime: ${site.average}%`}
         </span>
         <span>{site.daily[site.daily.length - 1].date.format('YYYY-MM-DD')}</span>
       </div>

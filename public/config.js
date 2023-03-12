@@ -1,9 +1,8 @@
 window.Config = {
   // Menu-bar Name
-  SiteName: 'HLP Status',
+  SiteName: 'Hosting Status',
 
   // UptimeRobot Api Keys
-  // Monitor-Specific  Read-Only
   ApiKeys: [
     'm793883641-2edcb5af15f7045abf2c2d24',
     'm793883641-2edcb5af15f7045abf2c2d24',
@@ -25,15 +24,18 @@ window.Config = {
   Navi: [
     {
       text: 'Homepage',
-      url: 'https://status.org.cn/'
+      url: 'https://status.org.cn/',
+      target: '_self'
     },
     {
       text: 'GitHub',
-      url: 'https://github.com/yb/uptime-status'
+      url: 'https://github.com/yb/uptime-status',
+      target: '_blank'
     },
     {
       text: 'Blog',
-      url: 'https://abo.xyz/'
+      url: 'https://abo.xyz/',
+      target: '_self'
     },
   ],
 };

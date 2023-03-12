@@ -1,6 +1,6 @@
-function Link(props = { text, to }) {
+function Link(props = { text, to, tar }) {
   return (
-    <a {...props} href={props.to}>
+    <a {...props} href={props.to} target={props.tar}>
       {props.text}
     </a>
   );
