@@ -1,6 +1,6 @@
 {
-  "name": "@hostlikepro/status-bot",
-  "version": "1.0.3",
+  "name": "@hostlikepro/RoboUptime",
+  "version": "1.2",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
