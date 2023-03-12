@@ -1,7 +1,8 @@
 {
-  "name": "uptime-status",
-  "version": "2.0.0",
+  "name": "status-bot",
+  "version": "1.0.1",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
