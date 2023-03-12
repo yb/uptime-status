@@ -1,6 +1,6 @@
 {
   "name": "@hostlikepro/RoboUptime",
-  "version": "1.2",
+  "version": "3.0.0",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
