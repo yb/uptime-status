@@ -1,11 +1,10 @@
 {
-  "name": "status-bot",
+  "name": "@hostlikepro/status-bot",
   "version": "1.0.1",
   "license": "MIT",
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "node test.js"
+    "build": "react-scripts build"
   },
   "dependencies": {
     "axios": "^0.27.2",
