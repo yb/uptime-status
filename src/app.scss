@@ -50,6 +50,9 @@ a {
     a:hover {
       color: $primary-color;
     }
+    a.hvr {
+      color: $primary-color;
+    }
   }
 }
 

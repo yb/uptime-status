@@ -25,6 +25,4 @@ jobs:
           skip-delete: false
           dry-run: false
           exclude: |
-            pxmx
-            lxc
-            vds
+            status
