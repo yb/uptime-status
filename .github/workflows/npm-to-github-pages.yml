@@ -1,0 +1,35 @@
+name: Node.js Package
+
+on:
+  push:
+    branches:
+      - 'build'
+    paths:
+      - 'build'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm install --save gh-pages
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 16
+      - run: npm ci
+      - run: npm run deploy
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.ALL_TOKEN}}
