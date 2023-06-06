@@ -7,6 +7,7 @@ import Package from '../../package.json';
 function App() {
 
   const apikeys = useMemo(() => {
+    const customapi = process.env.API_KEY;
     const { ApiKeys } = window.Config;
     if (Array.isArray(ApiKeys)) return ApiKeys;
     if (typeof ApiKeys === 'string') return [ApiKeys];
@@ -24,7 +25,7 @@ function App() {
         </div>
         <div id='footer'>
           <p>基于 <Link to='https://uptimerobot.com/' text='UptimeRobot' /> 接口制作，检测频率 5 分钟</p>
-          <p>&copy; 2020 <Link to='https://status.org.cn/' text='STATUS.ORG.CN' />, Version {Package.version}</p>
+          <p>&copy; 2023 <Link to='https://status.org.cn/' text='STATUS.ORG.CN' />, Version {Package.version}</p>
         </div>
       </div>
     </>
