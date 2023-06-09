@@ -6,7 +6,6 @@ import Package from '../../package.json';
 
 function App() {
 
-  const customapi = process.env.API_KEY;
   const apikeys = useMemo(() => {
     const { ApiKeys } = window.Config;
     if (Array.isArray(ApiKeys)) return ApiKeys;

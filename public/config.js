@@ -1,3 +1,4 @@
+const customapi = process.env.API_KEY;
 window.Config = {
 
   // 显示标题
