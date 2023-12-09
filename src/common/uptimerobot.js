@@ -1,6 +1,7 @@
 import axios from 'axios';
 import dayjs from 'dayjs';
 import { formatNumber } from './helper';
+import { Sort } from './sort';
 
 export async function GetMonitors(apikey, days) {
 
@@ -27,7 +28,8 @@ export async function GetMonitors(apikey, days) {
 
   const response = await axios.post('https://cors.status.org.cn/uptimerobot/v2/getMonitors', postdata, { timeout: 10000 });
   if (response.data.stat !== 'ok') throw response.data.error;
-  return response.data.monitors.map((monitor) => {
+  const processed = Sort(response.data.monitors);
+  return processed.map((monitor) => {
 
     const ranges = monitor.custom_uptime_ranges.split('-');
     const average = formatNumber(ranges.pop());
