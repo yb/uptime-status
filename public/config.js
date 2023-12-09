@@ -33,4 +33,9 @@ window.Config = {
       url: 'https://abo.xyz/'
     },
   ],
+
+  // 根据导航栏菜单排序
+  SortNavi: false,
+  // 根据导航栏菜单过滤没有的站点
+  FilterNavi: false,
 };
